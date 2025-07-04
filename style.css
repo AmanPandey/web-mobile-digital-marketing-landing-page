@@ -458,6 +458,34 @@ p {
   top: 20px;
 }
 
+@media (max-width: 991.98px) {
+  .step-card {
+    border-left: 3px solid var(--icon-color);
+    padding-left: 1rem;
+    position: relative;
+    margin-bottom: 2rem;
+  }
+
+  .step-card::before {
+    content: "";
+    position: absolute;
+    top: 0.5rem;
+    left: -11px;
+    width: 20px;
+    height: 20px;
+    background: var(--icon-color);
+    border-radius: 50%;
+  }
+
+  .arch-line {
+    display: none !important; /* Hide the arch-line image if needed */
+  }
+
+  .step-number {
+    display: none;
+  }
+}
+
 /*--------------------------------------------------------------
 # Industry / Card
 --------------------------------------------------------------*/
@@ -842,50 +870,6 @@ p {
 }
 
 /*--------------------------------------------------------------
-# PopUp Form
---------------------------------------------------------------*/
-.modal-content {
-  height: 400px;
-  overflow-y: auto;
-}
-.form-label {
-  font-weight: 600;
-  color: var(--default-color);
-}
-
-button[type="submit"] {
-  background-color: var(--button-background-color);
-  border: none;
-  color: var(--accent-color);
-  font-weight: 600;
-}
-button[type="submit"]:hover,
-button[type="submit"].btn:active {
-  background-color: var(--button-hover-color);
-  color: var(--accent-color);
-}
-.form-control:focus,
-.form-select:focus,
-.btn-close:focus {
-  box-shadow: none !important;
-  outline: none !important;
-}
-
-.modal-content {
-  height: 400px;
-  overflow-y: auto;
-  scrollbar-width: none;
-  margin-top: 100px;
-}
-
-.modal-content::-webkit-scrollbar {
-  display: none;
-}
-.form-control::placeholder {
-  font-size: 14px;
-}
-
-/*--------------------------------------------------------------
 # Global Footer
 --------------------------------------------------------------*/
 .footer {
@@ -1003,4 +987,107 @@ button[type="submit"].btn:active {
 .footer .credits {
   margin-top: 8px;
   font-size: 13px;
+}
+
+/*--------------------------------------------------------------
+# PopUp Form
+--------------------------------------------------------------*/
+.modal-content {
+  height: 500px;
+  overflow-y: auto;
+}
+.form-label {
+  font-weight: 400;
+  color: var(--default-color);
+}
+.form-control,
+.form-select {
+  border-radius: 20px;
+  border: 1px solid rgba(0, 37, 35, 0.3);
+}
+.form-control::placeholder {
+  font-size: 12px;
+}
+
+.form-select option[disabled][hidden] {
+  font-size: 12px;
+}
+.form-control:hover,
+.form-control:active,
+.form-control:focus,
+.form-select:focus {
+  border: 1px solid #01403d;
+}
+
+button[type="submit"] {
+  background-color: #01403d;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 8px 4px;
+}
+button[type="submit"]:hover,
+button[type="submit"].btn:active {
+  background-color: #002725;
+  color: white;
+}
+.form-control:focus,
+.form-select:focus,
+.btn-close:focus {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.modal-content {
+  height: 500px;
+  overflow-y: auto;
+  scrollbar-width: none;
+  margin-top: 20px;
+}
+
+.modal-content::-webkit-scrollbar {
+  display: none;
+}
+.form-control::placeholder {
+  font-size: 14px;
+}
+
+.modal-header {
+  background-color: #01403d;
+  padding: 10px 16px;
+  /* border: 2px solid red;  */
+}
+.modal-header img {
+  width: 200px;
+  margin-right: 20px;
+}
+.modal-title {
+  margin-top: -45px;
+}
+
+.modal-header .custom-close {
+  position: absolute;
+  top: 0px;
+  right: 15px;
+  font-size: 1.5rem;
+  color: white;
+  background: none;
+  border: none;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 4px;
+}
+
+@media screen and (max-width: 576px) {
+  .modal-header img {
+    width: 150px;
+    margin-right: 10px;
+  }
+  .modal-title {
+    margin-top: -10px;
+  }
 }
