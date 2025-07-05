@@ -445,7 +445,7 @@ p {
   top: 15px;
   width: 150px;
   right: 0;
-  left: calc(100% + 24px);
+  left: calc(100% + 10px);
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
